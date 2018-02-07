@@ -2,8 +2,8 @@
 <html>
 <!-- Header and links -->
 <?php   
-    <?php include("../views/Header.php") ?>
-    <?php include("./SQLConnection.php") ?>
+    include("../views/Header.php");
+    //include("./SQLConnection.php");
 ?> 
 
 <script type="text/javascript" src="../API_connection.js"></script>

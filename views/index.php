@@ -3,10 +3,22 @@
     
     <!-- Header and links -->
     <?php include("../views/Header.php") ?>
-    <script type="text/javascript" src="../API_connection.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
-    <body ng-app="LISA" ng-controller="indexCtrl">
+    <script type="text/javascript" src="../js/services/API_service.js"></script>
+    <script type="text/javascript" src="../js/modules/LISA.module.js"></script>
+    <script type="text/javascript" src="../js/controllers/indexController.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script>
+        var app = angular.module('visionneuseLisa', []);
+
+        app.controller('indexCtrl', function($scope){
+
+        });
+    </script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <body ng-app="app" ng-controller="indexCtrl">
         <!-- Barre de menu + recherche -->
         <?php include("./Menu.php") ?>
     
@@ -21,7 +33,11 @@
             <div class="starter-template">
                 <h1>LISA</h1>
                 <p class="lead">Les Imprimés Sans Adresse</p>
-                <div id="1" name="productDisplay" ng-repeat></div>
+                <div id="1"
+                    name="productDisplay"
+                    ng-options="product as product.Label from product in products">
+                    {{product.Label}}
+                </div>
             </div>
         </div>
         <!-- /.container -->
