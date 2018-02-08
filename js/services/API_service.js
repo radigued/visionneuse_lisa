@@ -1,6 +1,6 @@
 //Service d'appel à l'api permettant de gerer la visionneuse
 
-angular.module('visionneuseLisa').service('AppelWsSvc', function ($http) {
+angular.module('visionneuseLisa').service('API_service', function ($http) {
     //On initialise le préfixe de l'adresse d'accès à l'api
     this.prefixUrl = "localhost:50993/api/";
 

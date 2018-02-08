@@ -9,7 +9,7 @@
     <?php include("./Menu.php") ?>
 
     <div class="col-md-3">
-        <select class="col-xs-12" ng-model="selectedProduct" ng-options = "product.label for product in products">
+        <select class="col-xs-12" ng-model="selectedProduct" ng-options = "selectProduct = product.label for product in products">
             <option>{{selectedProduct.label}}</option>
         </select>
     </div>
@@ -17,8 +17,13 @@
         <div class="starter-template">
             <h1>LISA</h1>
             <p class="lead">Les Imprimés Sans Adresse</p>
-            <div id="1" name="productDisplay" ng-model="products" ng-init="products = getProduct()">
-                {{products.Label}}
+            <div class="card" ng-repeat="product in value">
+                <div class="item item-divider">
+                  {{product.label}}
+                </div>
+                <div class="item item-text-wrap">
+                  {{product.description}}
+                </div>
             </div>
         </div>
     </div>
