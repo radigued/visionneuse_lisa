@@ -1,10 +1,7 @@
-angular.module('visionneuseLisa').controller('indexCtrl', ['$scope', 'AppelWsSvc', function($scope, AppelWsSvc){
+angular.module('visionneuseLisa').controller('indexCtrl', ['$scope', 'AppelWsSvc', function ($scope, AppelWsSvc) {
 
-
-    $scope.productId = 1;
-
-    $scope.getProduct = function(){
-        AppelWsSvc.getAllProducts($scope.productId).then(function(value){
+    $scope.getProduct = function () {
+        AppelWsSvc.getAllProducts().then(function (value) {
             console.log(value);
         })
     }

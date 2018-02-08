@@ -4,7 +4,7 @@
 <?php   
     include("../views/Header.php");
     //include("./SQLConnection.php");
-?> 
+?>
 
 <script type="text/javascript" src="../API_connection.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
