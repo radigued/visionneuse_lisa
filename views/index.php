@@ -9,8 +9,10 @@
     <?php include("./Menu.php") ?>
 
     <div class="col-md-3">
-        <select class="col-xs-12" ng-model="selectedProduct" ng-options = "selectProduct = product.label for product in products">
-            <option>{{selectedProduct.label}}</option>
+        <select class="col-xs-12">
+        <!--<select class="col-xs-12" ng-model="selectedProduct" ng-options = "selectProduct = product.label for product in products">-->
+            <option>-- Choississez votre article --</option>
+            <!--<option>{{selectedProduct.label}}</option>-->
         </select>
     </div>
     <div class="container">

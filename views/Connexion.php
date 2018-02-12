@@ -6,25 +6,23 @@
     //include("./SQLConnection.php");
 ?>
 
-<script type="text/javascript" src="../API_connection.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
 
 <body>
     <!-- Barre de menu + recherche -->
     <?php 
-        include("./Menu.php"); 
-        include("./API_connection.js")
+        include("./Menu.php");
     ?>
 
     <div class="container">
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <?php 
-                $_valid_Connexion = false;
-            while($_valid_Connexion != true) 
-            {
-            ?>
+            //    $_valid_Connexion = false;
+            //while($_valid_Connexion != true)
+            //{
+            //?>
             <form method="post" action="./index.php">
                 <h1>Connexion</h1>
                 <hr>
@@ -38,8 +36,8 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Connect</button>
             </form>
             <?php
-            }
-            ?>
+            //}
+            //?>
 
         </div>
         <div class="col-md-4"></div>
